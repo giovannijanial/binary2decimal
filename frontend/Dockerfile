@@ -2,12 +2,12 @@ FROM node:16.16.0-alpine
 
 WORKDIR /usr/app/frontend
 
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
 EXPOSE 5173
 
-CMD ["npm", "run", "dev"]
+CMD ["yarn", "dev"]
