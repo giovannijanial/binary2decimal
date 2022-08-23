@@ -4,7 +4,10 @@ class TransformBinaryToDecimal {
 	execute(binaryNumber: string): Number {
 		const arrBinary = binaryNumber.split("");
 
-		if (arrBinary.some((binary) => !["0", "1"].includes(binary))) {
+		if (
+			arrBinary.some((binary) => !["0", "1"].includes(binary)) ||
+			!arrBinary.length
+		) {
 			throw new AppError("Binary number is invalid!");
 		}
 

@@ -20,4 +20,13 @@ describe("Transform binary number", () => {
 			transformBinaryToDecimal.execute(binaryNumber)
 		).rejects.toEqual(new AppError("Binary number is invalid!"));
 	});
+
+	it("Should not be transform a empty string", async () => {
+		const transformBinaryToDecimal = new TransformBinaryToDecimal();
+
+		const binaryNumber = "";
+		await expect(
+			transformBinaryToDecimal.execute(binaryNumber)
+		).rejects.toEqual(new AppError("Binary number is invalid!"));
+	});
 });
