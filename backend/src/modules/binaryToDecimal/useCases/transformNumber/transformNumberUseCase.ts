@@ -5,7 +5,6 @@ class TransformNumberUseCase {
 		const transformBinaryToDecimal = new TransformBinaryToDecimal();
 
 		const numberConvert = transformBinaryToDecimal.execute(binaryNumber);
-		console.log(numberConvert);
 		return numberConvert;
 	}
 }

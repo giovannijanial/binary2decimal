@@ -8,8 +8,7 @@ class TransformNumberController {
 		const postFileUseCase = new TransformNumberUseCase();
 
 		const result = postFileUseCase.execute(binaryNumber);
-
-		return res.sendStatus(201).send(result);
+		return res.send({ result });
 	}
 }
 
