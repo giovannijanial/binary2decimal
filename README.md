@@ -12,14 +12,7 @@
 
 ## :rocket: How start
 ```
- $ cd backend
- $ yarn install
- $ yarn dev
-```
-```
- $ cd frontend
- $ yarn install
- $ yarn dev
+ $ docker compose up --build
 ```
 - backend starts in [localhost:3000](http://localhost:3000/).
 - frontend starts in [localhost:5173](http://localhost:5173/).
