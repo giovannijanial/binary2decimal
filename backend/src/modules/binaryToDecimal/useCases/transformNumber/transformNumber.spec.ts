@@ -12,21 +12,21 @@ describe("Transform binary number", () => {
 		expect(result).toEqual(transformedNumber);
 	});
 
-	it("Should not be transform a invalid binary number", async () => {
+	it("Should not be transform a invalid binary number", () => {
 		const transformBinaryToDecimal = new TransformBinaryToDecimal();
 
 		const binaryNumber = "020101";
-		await expect(
-			transformBinaryToDecimal.execute(binaryNumber)
-		).rejects.toEqual(new AppError("Binary number is invalid!"));
+		expect(() => transformBinaryToDecimal.execute(binaryNumber)).toThrow(
+			"Binary number is invalid!"
+		);
 	});
 
-	it("Should not be transform a empty string", async () => {
+	it("Should not be transform a empty string", () => {
 		const transformBinaryToDecimal = new TransformBinaryToDecimal();
 
 		const binaryNumber = "";
-		await expect(
-			transformBinaryToDecimal.execute(binaryNumber)
-		).rejects.toEqual(new AppError("Binary number is invalid!"));
+		expect(() => transformBinaryToDecimal.execute(binaryNumber)).toThrow(
+			"Binary number is invalid!"
+		);
 	});
 });
