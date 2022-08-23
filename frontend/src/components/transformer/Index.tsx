@@ -52,14 +52,12 @@ const Transformer = () => {
         <label className="label">
           Result Number:
         </label>
-        <input
-          className="input"
-          type="text"
-          dir="rtl"
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
-        />
-        {error && (<p>{error}</p>)}
+
+        {error ? (
+          <p className="error">{error}</p>
+        ) : (
+          <p className="number">{number}</p>
+        )}
       </div>
     </>
 
