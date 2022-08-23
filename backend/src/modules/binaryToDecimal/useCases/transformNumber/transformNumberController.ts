@@ -5,9 +5,9 @@ class TransformNumberController {
 	handle(req: Request, res: Response) {
 		const { binaryNumber } = req.body;
 
-		const postFileUseCase = new TransformNumberUseCase();
+		const transformNumberUseCase = new TransformNumberUseCase();
 
-		const result = postFileUseCase.execute(binaryNumber);
+		const result = transformNumberUseCase.execute(binaryNumber);
 		return res.send({ result });
 	}
 }

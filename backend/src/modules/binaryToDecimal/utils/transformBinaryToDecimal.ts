@@ -8,14 +8,14 @@ class TransformBinaryToDecimal {
 			throw new AppError("Binary number is invalid!");
 		}
 
-		let numberConvert: number = 0;
+		let transformedNumber: number = 0;
 		arrBinary.reverse().map((binary, index) => {
 			if (binary !== "0") {
-				numberConvert += Math.pow(2, index);
+				transformedNumber += Math.pow(2, index);
 			}
 		});
 
-		return numberConvert;
+		return transformedNumber;
 	}
 }
 
