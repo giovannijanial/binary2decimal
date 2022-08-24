@@ -1,4 +1,3 @@
-import { AppError } from "../../../../errors/AppError";
 import { TransformBinaryToDecimal } from "../../utils/transformBinaryToDecimal";
 
 describe("Transform binary number", () => {

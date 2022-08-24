@@ -12,7 +12,7 @@ class TransformBinaryToDecimal {
 		}
 
 		let transformedNumber: number = 0;
-		arrBinary.reverse().map((binary, index) => {
+		arrBinary.reverse().forEach((binary, index) => {
 			if (binary !== "0") {
 				transformedNumber += Math.pow(2, index);
 			}
